@@ -1,0 +1,30 @@
+name: nginx-postgres-php-app
+
+services:
+  nginx:
+    image: nginx:stable-perl
+    volumes:
+      - ./src:/usr/share/nginx/html
+      - ./nginx/conf.d:/etc/nginx/conf.d
+    ports:
+      - "8000:80"
+#    depends_on:
+#      - postgres
+    networks:
+      - backend
+  
+  postgres:
+    image: postgres:latest
+    volumes: 
+      - ./pg_data:/home/postgres
+    environment:
+      POSTGRES_PASSWORD: 82Df93a_a
+#      POSTGRES_USER: some_user1
+#      POSTGRES_DB: database1
+    ports:
+      - "9999:5432"
+    networks:
+      - backend
+  
+networks:
+  backend:
