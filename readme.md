@@ -26,3 +26,7 @@
 
 4. якщо вірсії інші, то скористатися sql файлом, зайти в контейнер і в середині виконати
     - `pg_dump -U postgres -d ser --create > ser.sql`
+
+## Mailer
+
+Mailer `axllent/mailpit` in progress.
