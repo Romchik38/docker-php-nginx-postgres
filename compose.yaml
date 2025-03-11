@@ -14,8 +14,8 @@ services:
       - backend
   
   php-fpm: 
-#    build: ./php-fpm/
-    image: php:8.3-fpm
+    build: ./php-fpm/
+    #image: php:8.3-fpm
     volumes:
       - ./src1:/scripts
     depends_on:
@@ -44,6 +44,9 @@ services:
     environment:
       MP_SMTP_AUTH_ACCEPT_ANY: 1
       MP_SMTP_AUTH_ALLOW_INSECURE: 1
+    networks:
+      - backend
 
 networks:
   backend:
+    driver: bridge
