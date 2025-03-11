@@ -1,6 +1,8 @@
-# Compose
+# Readme
 
-[doc](https://docs.docker.com/compose/intro/compose-application-model/)
+Example docker package with nginx, postgres, php-fpn and mailer
+
+## Compose
 
 - `docker compose up`
 - `docker compose down`
@@ -29,4 +31,4 @@
 
 ## Mailer
 
-Mailer `axllent/mailpit` in progress.
+Mailer `axllent/mailpit`
